@@ -1,0 +1,87 @@
+@media screen and (max-width:768px) {
+    #header .globalMenuSp {
+        /* border: solid; */
+        display: none;
+        transition: all 2s ;        
+    }
+
+    #header .globalMenuSp.active{
+        /* border: solid; */
+        display: block;
+        /* display: none; */
+        transition: all 2s;
+    }
+
+    #header .header-tab .globalMenuSp {
+        /* border: solid; */
+        padding-top: 0px;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100vw; /*メニュー幅*/
+        height: 100vh;
+        z-index: 30000;
+        background-color: #fff;
+    }
+
+     /* hamburger menuの実装 */
+     .hamburger {
+        /* border: solid; */
+        display: flex;
+        position: absolute;
+        top: 8px;
+        right: 18.5px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        text-align: center;
+        transition: .3s ease-in-out;
+        z-index: 2000;
+    }
+
+    .hamburger span {
+        /* border: solid; */
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        right: 9.3px;
+        background: #333333;
+        transition: .3s ease-in-out;
+    }
+    .hamburger span:nth-child(1) {
+        top: 10px;
+    }
+    .hamburger span:nth-child(2) {
+        top: 17px;
+    }
+    .hamburger span:nth-child(3) {
+        top: 24px;
+    }
+    /* -------------------------------------- */
+    /* hamburger アクション時の動き */
+    .hamburger.active {
+        transform: rotate(-180deg);
+        transition: all 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        top: 18px;
+        transform: rotate(-45deg);
+        transition: all .3s;
+        background: #333;
+    }
+    .hamburger.active span:nth-child(2) {
+        top: 18px;
+        /* opacity: 0; */
+        transform: rotate(-135deg);
+        transition: all 0.3s;
+    }
+    .hamburger.active span:nth-child(3) {
+        opacity: 0;
+        /* top: 18px; */
+        /* transform: rotate(-315deg); */
+        /* transition: all .5s; */
+        /* background-color: #333; */
+    }
+}
