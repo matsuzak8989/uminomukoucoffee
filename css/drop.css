@@ -1,0 +1,188 @@
+@media screen and (max-width:768px) {
+    
+    nav{
+        color:#fff;
+        text-align: center;
+    }
+    /*ナビゲーションを横並びに*/
+    nav ul{
+        list-style: none;
+        /* display: flex; */
+        justify-content: center;
+    }
+    /*2階層目以降は横並びにしない*/
+    nav ul ul{
+        display: block;
+    }
+    
+    /*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+    nav ul li{
+        position: relative;
+    }
+    
+    /*ナビゲーションのリンク設定*/
+    nav ul li a{
+        /* border: solid; */
+        display: block;
+        text-decoration: none;
+        color: #333;
+        padding:20px 35px;
+        transition:all .3s;
+    }
+    
+    nav ul li li a{
+        /* border: solid; */
+        padding:10px 3px;
+    }
+
+    nav ul li li a::before{
+        content: "";
+        position: absolute;
+        top: 50%;   /* 縦軸をセンタリングする */ 
+        left: -15px;
+        transform: translateY(-50%);   /* 縦軸をセンタリングする */  
+        border: 3px solid transparent;
+        border-left: 8px solid #555;   /* 好みで色を変えてください */  
+    }
+
+    
+    /* nav ul li a:hover{
+        color:#fff;	
+    } */
+    
+    /*==矢印の設定*/
+    
+    /*2階層目を持つliの矢印の設定*/
+    nav ul li.has-child1::after{
+        content:'';
+        position: absolute;
+        right:220px;
+        top:15px;
+        width:10px;
+        height:10px;
+        border-top: 2px solid #999;
+        border-right:2px solid #999;
+        transform: rotate(135deg);
+    }
+    nav ul li.has-child2::after{
+        content:'';
+        position: absolute;
+        right:155px;
+        top:15px;
+        width:10px;
+        height:10px;
+        border-top: 2px solid #999;
+        border-right:2px solid #999;
+        transform: rotate(135deg);
+    }
+    
+    /*== 2・3階層目の共通設定 */
+    
+    /*下の階層を持っているulの指定*/
+    nav li.has-child1 ul,
+    nav li.has-child2 ul{
+        /*絶対配置で位置を指定*/
+        position: absolute;
+        left:0;
+        top:62px;
+        z-index: 4;
+        /*形状を指定*/
+        background:#FFFFFF;
+        width:180px;
+        /*はじめは非表示*/
+        visibility: hidden;
+        opacity: 1;
+        /*アニメーション設定*/
+        transition: all .3s;
+    }
+    
+    /*hoverしたら表示*/
+    /* nav li.has-child:hover > ul,
+    nav li.has-child ul li:hover > ul,
+    nav li.has-child:active > ul,
+    nav li.has-child ul li:active > ul{
+      visibility: visible;
+      opacity: 1;
+    } */
+    
+    /*ナビゲーションaタグの形状*/
+    /* nav li.has-child ul li a{
+        color: #fff;
+        border-bottom:solid 1px rgba(255,255,255,0.6);
+    } */
+    
+    /* nav li.has-child ul li:last-child a{
+        border-bottom:none;
+    } */
+    
+    /* nav li.has-child1 ul li a:hover,
+    nav li.has-child2 ul li a:hover,
+    nav li.has-child1 ul li a:active,
+    nav li.has-child2 ul li a:active{
+        background:#3577CA;
+    } */
+
+    
+    /*==768px以下の形状*/
+    
+        /* nav{
+            padding: 0;
+        } */
+        
+        /* nav ul{
+            display: block;
+        } */
+        
+        nav li.has-child1 ul,
+        nav li.has-child2 ul{
+        position: relative;
+        left:0;
+        top:0;
+        width:100%;
+        visibility:visible;/*JSで制御するため一旦表示*/
+        opacity:1;/*JSで制御するため一旦表示*/
+        display: none;/*JSのslidetoggleで表示させるため非表示に*/
+        transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+    }
+        
+    /* nav ul li a{
+        border-bottom:1px solid #ccc;
+    } */
+    
+    /*矢印の位置と向き*/
+    
+    nav ul li.has-child1::after{
+        left:190px;	
+    }
+
+    .sp_footer nav ul li.has-child1::after{
+        /* display: none; */
+        position: absolute;
+        top: 25px;
+        left: 275px;
+    }
+
+
+    nav ul li.has-child2::after{
+        left:260px;	
+    }
+
+    .sp_footer nav ul li.has-child2::after{
+        /* display: none; */
+        position: absolute;
+        top: 25px;
+        left: 370px;
+    }
+
+    
+    nav ul ul li.has-child1::after,
+    nav ul ul li.has-child2::after{
+        transform: rotate(135deg);
+        left:20px;
+    }
+        
+    nav ul li.has-child1.active::after,
+    nav ul li.has-child2.active::after {
+        transform: rotate(-45deg);
+    }   
+}
