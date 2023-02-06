@@ -1,0 +1,2233 @@
+@charset "UTF-8";
+html {
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    /* border: solid; */
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+h1,h2{
+    width: 100%;
+    margin: 0; /* header内部の領域を無くすため*/
+    font-weight: normal;
+}
+
+span{
+    /* border: solid; */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wrap {
+    /* border: solid; */
+    max-width: 1500px;
+    min-width: 1150px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* -----------------------------header 全体の枠組------------------------------------ */
+#header{
+    /* border: solid; */
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+    /* background: #FFFFFF; */
+    padding: 0 40px;
+}
+
+#header .header-image{
+    display: none;
+}
+
+.header-wrappar{
+    /* border: solid 3px green; */
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1250px;
+    width: 100%;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+#header .header-wrappar .main-header {
+    /* border: solid red; */
+    display: flex;
+    /* position: fixed; */
+    /* width: 100%; */
+    justify-content: space-between;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+
+.globalMenuSp {
+    display: none;
+}
+
+/* -----------------------------header1 - block------------------------------------ */
+
+.header-block1{
+    /* border: solid red; */
+    position: relative;
+    box-shadow: 1px 1px 6px 1px;
+    background: #FFFFFF;
+    display: flex;
+    /* max-width: 800px; */
+    /* min-width: 600px; */
+    width: 850px;
+    /* width: 100%; */
+    height: 80px;
+    border-radius: 2px 2px;
+    margin-right: 0px;
+}
+.header-block1 .part1{
+    /* border: solid; */
+    /* max-width: 300px; */
+    /* width: 100%; */
+    width: 200px;
+    height: 60px;
+    margin: 9px 5px;
+    border-right: solid 1px;
+}
+
+.header-block1 .part1 img{
+    /* border: solid; */
+    display: block;
+    object-fit: contain;
+    max-width: 200px;
+    width: 90%;
+    height: 50px;
+    margin: 4px 10px;
+}
+
+.header-block1 .part2{
+    /* border: solid blue; */
+    position: relative;
+    top: 16px;
+    /* max-width: 200px; */
+    /* width: 100%; */
+    width: 170px;
+    height: 50px;
+    margin: 0 15px;
+    /* padding: 2px; */
+}
+
+.header-block1 .part2 .arrow1 {
+    /* border: solid red; */
+    /* max-width: 400px; */
+    /* min-width: 150px; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    /* font-size: 1em; */
+}
+
+.header-block1 .part2 .arrow1:after{
+    position: absolute;
+    top: 3px;
+    /* bottom: 0; */
+    right: 10px;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    width: 0.7em;   /* arrow size */
+    height: 0.7em;  /* arrow size */
+    border-top: 1px solid black;  /* thickness, color */
+    border-right: 1px solid black;
+    transform: rotate(135deg);
+}
+.header-block1 .part2 .arrow2 {
+    /* border: solid red; */
+    min-width: 150px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    /* font-size: 1em; */
+}
+
+.header-block1 .part2 .arrow2:after{
+    position: absolute;
+    top: 3px;
+    /* bottom: 0; */
+    right: -8px;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    width: 0.7em;   /* arrow size */
+    height: 0.7em;  /* arrow size */
+    border-top: 1px solid black;  /* thickness, color */
+    border-right: 1px solid black;
+    transform: rotate(135deg);
+}
+
+.header-block1 .part2 a {
+    /* border: solid 1px pink; */
+    display: block;
+}
+
+.header-block1 .part2 a span{
+    font-weight: bold;
+}
+
+.header-block1 .part3{
+    /* border: solid yellow; */
+    display: block;
+    /* position: relative; */
+    /* max-width: 150px; */
+    /* width: 100%; */
+    width: 170px;
+    height: 50px;
+    margin: 15px 0px;
+    /* padding: 2px; */
+}
+
+.header-block1 .part3 a {
+    /* border: solid pink; */
+    display: block;
+}
+.header-block1 .part3 a span {
+    font-weight: bold;
+}
+/* -----------------------------サブメニュー ------------------------------------ */
+.header-block1 ul.part2 ul {
+    display: none;
+}
+
+ul.part2 > li:hover ul.about-us {
+    /* border: solid; */
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 55px;
+    left: -80px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1px 1px;
+    border-radius: 2px 2px;
+    padding: 8px 0;
+}
+
+ul.part2 > li:hover ul li{
+    /* border: solid; */
+    margin: 10px 0;
+}
+
+ul.part2 > li:hover ul li span{
+    /* border: solid; */
+    display: block;
+    margin-top: -2px;
+}
+
+ul.part2 > li:hover ul.origin-story {
+    /* border: solid; */
+    display: block;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 55px;
+    left: -30px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1px 1px;
+    border-radius: 2px 2px;
+    padding: 6px 0;
+}
+
+/* -----------------------------header2 - block------------------------------------ */
+/* ----------------------------ご家庭用部分と業務用部分のボタン------------------------- */
+.header-block2{
+    /* border: solid  pink;  */
+    position: relative;
+    box-shadow: 1px 1px 1px 1px;
+    max-width: 200px;
+    min-width: 170px;
+    width: 17%;
+    height: 80px;
+    border-radius: 2px 2px;
+    background: #1A2173;
+    margin-left: 15px;
+}
+.header-block2:hover{
+    background: #FFFFFF;
+}
+.header-block2:hover:after{
+    position: absolute;
+    content: '';
+    top: 11px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.header-block2::before{
+    /* border: solid pink; */
+    position: absolute;
+    content: '';
+    top: 11px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.header-block2 .part li {
+    /* border: solid pink; */
+    display: block;
+    width: 100%;
+    height: 80px;
+    font-size: 13px;
+    font-weight: normal;
+}
+.header-block2 .part a{
+    /* border: solid; */
+    display: block;
+    width: auto;
+    height: 80px;
+    color: #FFFFFF;
+    padding: 10px;
+    transition: .4s;
+}
+.header-block2 .part a:hover{
+    color: #1A2173;
+    transition: .4s;
+}
+
+.header-block2 .part span{
+    font-size: 9px;
+    font-weight: bold;
+}
+
+/* -----------------------------header slider ------------------------------------ */
+#home_mv{
+    position: relative;
+}
+
+#header-slider .slide {
+    /* border: solid pink; */
+    position: absolute;
+    top: -115px;
+    left: -52px;
+    /* max-width: 100%; */
+    width: 1100px;
+    height: 700px;
+    overflow: hidden;
+    z-index: -1;
+    transform: translateX(-25%);
+}
+
+@keyframes slideshow{
+    0%{
+      opacity: 0;
+    }
+    10%{
+      opacity: 1;
+    }
+    28%{
+      opacity: 1
+    }
+    38%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+#header-slider .slide .img-vw {
+    /* border: solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 80%; */
+    opacity: 0;
+    animation :slideshow 24s linear infinite;
+}
+
+#header-slider .slide img:nth-child(2){
+    animation-delay: 8s;
+}
+#header-slider .slide img:last-child{
+    animation-delay: 16s;
+}
+
+/* ----------------------------- header-text ------------------------------------ */
+/* ----------------------------- header-picture ------------------------------------ */
+#header-text {
+    position: relative;
+}
+
+#header-text .img-vw2 {
+    /* border: solid; */
+    position: absolute;
+    top: 160px;
+    left: 900px;
+    display: block;
+    min-width: 200px;
+    /* overflow: visible; */
+    z-index: -1;
+}
+#header-text .img-vw2-2 {
+    display: none;
+}
+
+#header-picture {
+    /* border: solid blue; */
+    position: absolute;
+    object-fit: contain;
+    top: 205px;
+    left: 1175px;
+    width: 500px;
+    height: 300px;
+    z-index: -1;
+}
+
+#header-picture .img-vw3 {
+    width: 100%;
+    height:100%;
+}
+
+/*---------------------------------- main-wrappar -------------------------------------- */
+#main-wrappar {
+    /* border: solid pink; */
+    position: absolute;
+    width: 1250px;
+    left: 50%;  
+    transform: translateX(-50%);
+}
+
+/* main-box1について------------------------------------ */
+#main-wrappar section .main-box1{
+    /* border: solid; */
+    display: flex;
+    margin: 800px auto 0;
+}
+
+#main-wrappar section .main-box1 .container1 {
+    /* border: solid; */
+    width:50%;
+}
+
+#main-wrappar section .main-box1 .container1 img{
+    width: 500px;
+}
+
+#main-wrappar section .main-box1 .container1 h3{
+    position: relative;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 44px;
+    margin: 80px;
+}
+#main-wrappar section .main-box1 .container1 h3::after{
+    /* border: solid; */
+    display: block;
+    position: absolute;
+    content: "";
+    background-image: url(../img/home_lead_bg.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    top: 210px;
+    left: 370px;
+}
+
+#main-wrappar section .main-box1 .container2 {
+    /* border: solid; */
+    width: 50%;
+    padding-top: 160px;
+}
+
+/* main-box2について-------------------------------------- */
+#main-wrappar section .main-box2{
+    /* border: solid; */
+    display: flex;
+    margin: 50px auto 0;
+}
+
+#main-wrappar section .main-box2 .container1{
+    /* border: solid; */
+    width:50%;
+}
+
+#main-wrappar section .main-box2 .container2 {
+    /* border: solid; */
+    width:50%;
+}
+
+#main-wrappar section .main-box2 .container2 h3{
+    /* border: solid; */
+    position: relative;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 44px;
+    margin: 0 70px 25px;
+}
+
+#main-wrappar section .main-box2 .container2 p{
+    /* border: solid; */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 70px 25px;
+}
+
+#main-wrappar section .main-box2 .container3{
+    position: relative;
+    /* border: solid 1px blue; */
+    border-radius: 5px;
+    text-align: center;
+    width: 330px;
+    height: 60px;
+    margin: 15px 70px 15px;
+    
+}
+
+#main-wrappar section .main-box2 .container3:hover{
+    /* border: solid 1px blue; */
+    border-radius: 5px;
+    background: #192287;
+}
+
+/* マウスをホバーした時の変化 */
+/* ホバー前の変化 */
+#main-wrappar section .main-box2 .container3 a{
+    /* border: solid; */
+    display: block;
+    color: #1A2172;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    border: solid 1px blue;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+/* 右矢印→ ホバー前 */
+#main-wrappar section .main-box2 .container3 a::before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #192287;
+    border-right: 2px solid #192287;
+    transform: rotate(45deg); /* 角度調整 */
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box2 .container3 a::after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 20px;
+    height: 2px;
+    background: #192287;
+    transition: all 0.6s;
+}
+
+/* ホバー後の変化 */
+#main-wrappar section .main-box2 .container3 a:hover{
+    background:  #1A2172;
+    color: #FFFFFF;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+/* 右矢印→ ホバー後 */
+#main-wrappar section .main-box2 .container3 a:hover:before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    transform: rotate(45deg); /* 角度調整 */
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box2 .container3 a:hover:after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 20px;
+    height:2px;
+    background: #FFFFFF;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box2 .container4{
+    position: relative;
+    right: 0px;
+}
+
+#main-wrappar section .main-box2 .container4 .figure::after{
+    /* border: solid; */
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../img/home_about_bg.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    top: -70px;
+    right: 40px;
+}
+
+/* main-box3について-------------------------------------- */
+/* main-box3 container1について-------------------------------------- */
+#main-wrappar section .main-box3{
+    /* border: solid; */
+    display: flex;
+    margin: 50px auto 60px;
+} 
+
+#main-wrappar section .main-box3 .container1{
+    /* border: solid; */
+    position: relative;
+    background: #1A2172;
+    border-radius: 5px;    
+    text-align: center;
+    width: 380px;
+    height: 150px;
+    margin: 0 40px 0 245px;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container1 a{
+    /* border: solid; */
+    display: block;
+    width: 380px;
+    height: 150px;
+    padding: 50px 0;
+    color: #FFFFFF;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container1 a:hover{
+    border: solid 1px #1A2172;
+    border-radius: 5px;    
+    background: #FFFFFF;
+    color: #1A2172;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container1 a:before{
+    position: absolute;
+    content: '';
+    top: 11px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container1 a:hover:after{
+    position: absolute;
+    content: '';
+    top: 11px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container1 a span.text1{
+    font-size: 20px;
+    font-weight: 500;
+}
+#main-wrappar section .main-box3 .container1 a span.text1:before{
+    position: absolute;
+    content: '';
+    top: 75px;
+    left: 70px;
+    display: inline-block;
+    width: 200px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container1 a span.text2{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* main-box3について-------------------------------------- */
+/* main-box3 container2について-------------------------------------- */
+#main-wrappar section .main-box3 .container2{
+    /* border: solid; */
+    position: relative;
+    text-align: center;
+    width:380px;
+    height: 150px;
+}
+
+#main-wrappar section .main-box3 .container2 a.container2_items1{
+    /* border: solid; */
+    border-radius: 5px;
+    background: #1A2172;
+    color: #FFFFFF;
+    display: block;
+    height: 70px;
+    margin: 0;
+    padding: 6px;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 a.container2_items1:before{
+    position: absolute;
+    content: '';
+    top: 11px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 a.container2_items1:hover{
+    border: solid 1px #1A2172;
+    border-radius: 5px;    
+    background: #FFFFFF;
+    color: #1A2172;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 a.container2_items1:hover::after{
+    position: absolute;
+    content: '';
+    top: 11px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container2 .container2_items2{
+    /* border: solid; */
+    border-radius: 5px;
+    background: #1A2172;
+    color: #FFFFFF;
+    display: block;
+    height: 70px;
+    margin: 0;
+    padding: 6px;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 .container2_items2:before{
+    position: absolute;
+    content: '';
+    top: 91px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 .container2_items2:hover{
+    border: solid 1px #1A2172;
+    border-radius: 5px;    
+    background: #FFFFFF;
+    color: #1A2172;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 .container2_items2:hover::after{
+    position: absolute;
+    content: '';
+    top: 91px;
+    right: 9px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container2 a span.text1{
+    font-size: 20px;
+    font-weight: 500;
+}
+#main-wrappar section .main-box3 .container2 a span.text1:before{
+    position: absolute;
+    content: '';
+    top: 30px;
+    left: 100px;
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box3 .container2 .container2_items2 span.text1:before{
+    position: absolute;
+    content: '';
+    top: 110px;
+    left: 160px;
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box3 .container2 a span.text2{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+#main-wrappar section .main-box3 .container2 a:last-child{
+    margin: 10px 0 0;
+}
+
+/* --------------------------- main-box4 ----------------------------*/
+#main-wrappar section .main-box4 {
+    /* border: solid; */
+    position: relative;
+    background: #F3F3F3;
+    width: 100%;
+    margin-top: 170px;
+    margin-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 200px;
+}
+/* --------------------------- main-box4 ----------------------------*/
+/* --------------------------- container1 ----------------------------*/
+
+#main-wrappar section .main-box4 .container1 h1{
+    /* border: solid; */
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box4 .container1 h1:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 350px;
+    background-image: url(../img/home_story_bg.png);
+    width: 100px;
+    height: 100px;
+
+}
+
+#main-wrappar section .main-box4 .container1 h3{
+    /* border: solid; */
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 500;
+}
+#main-wrappar section .main-box4 .container1 p {
+    /* border: solid; */
+    display: block;
+    margin-bottom: 16px;
+    margin-left: 50px;
+    width: 600px;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+#main-wrappar section .main-box4 .container1 img.figure1 {
+    /* border: solid; */
+    position: absolute;
+    top: -50px;
+    right: 0;
+    display: block;
+    object-fit: cover;
+    width: 600px;
+    height: 300px;
+}
+
+/* -------------------- main-box4 ---------------------------- */
+#main-wrappar section .main-box4 .container2{
+    /* border: solid; */
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; 
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 50px;
+    padding: 50px;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size {
+    /* border: solid; */
+    display: inline-block;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size img {
+    /* border: solid; */
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s ease;
+    opacity: 0.6;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size .text{
+    /* border: solid; */
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 200px;
+    height: 80px;
+    color: #F3F3F3;
+    z-index: 20;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size .text p{
+    /* border: solid; */
+    font-size: 42px;
+    line-height: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size .text span{
+    /* border: solid; */
+    display: block;
+    width: 150px;
+    font-size: 21px;
+    line-height: 19px;
+    font-weight: bold;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size .dli-arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    line-height: 1;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    width: 2em;
+    height: 0.1em;
+    background: currentColor;
+    z-index: 30;
+}
+
+#main-wrappar section .main-box4 .container2 .box-size .dli-arrow-right::before {
+    content: '';
+    width: 0.7em;
+    height: 0.7em;
+    border: 0.1em solid currentColor;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(-225deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 50%;
+    left: 2em;
+    box-sizing: border-box;
+}
+
+#main-wrappar section .main-box4 video{
+    /* border: solid; */
+    display: block;
+    max-width: 1000px;
+    /* width: 100vw; */
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* main-box5について-------------------------------------- */
+/* main-box5 container2について-------------------------------------- */
+#main-wrappar section .main-box5 {
+    /* border: solid; */
+    position: relative;
+    margin-top: 10px;
+}
+
+#main-wrappar section .main-box5 .container1 img{
+    /* display: none; */
+    position: absolute;
+    object-fit: cover;
+    top: -180px;
+    width: 550px;
+    height: 550px;
+}
+#main-wrappar section .main-box5 .container1 h1{
+    /* border: solid; */
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 650px;
+    width: 400px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box5 .container1 h3{
+  /* border: solid; */
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 650px;
+    width: 400px;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box5 .container1 p.text1-1{
+    display: none;
+}
+
+
+#main-wrappar section .main-box5 .container1 p.text1{
+  /* border: solid; */
+    display: block;
+    margin-bottom: 16px;
+    margin-left: 650px;
+    width: 600px;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+#main-wrappar section .main-box5 .container1_1 {
+    position: relative;
+    top: 30px;
+    left: 650px;
+    border: solid 1px blue;
+    border-radius: 5px;
+    text-align: center;
+    width: 330px;
+    height: 60px;
+    margin: 15px 70px 15px;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container1_1:hover {
+    /* border: solid 1px blue; */
+    border-radius: 5px;
+    background:  #1A2172;
+    transition: all 0.6s;
+}
+
+
+#main-wrappar section .main-box5 .container1_1 a{
+    /* border: solid; */
+    display: block;
+    color: #1A2172;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container1_1 a::before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #192287;
+    border-right: 2px solid #192287;
+    transform: rotate(45deg); /* 角度調整 */
+    transition: all 0.6s;
+} 
+
+#main-wrappar section .main-box5 .container1_1 a::after {
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 20px;
+    height: 2px;
+    background: #192287;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container1_1 a:hover{
+    background:  #1A2172;
+    color: #FFFFFF;
+    transition: all 0.6s;
+    border-radius: 5px;
+}
+
+#main-wrappar section .main-box5 .container1_1 a:hover::before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    transform: rotate(45deg); /* 角度調整 */
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container1_1 a:hover::after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 20px;
+    height:2px;
+    background: #FFFFFF;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container1 p.text2-1{
+    display: none;
+}
+
+#main-wrappar section .main-box5 .container1 p.text2{
+    /* border: solid; */
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 110px;
+}
+
+#main-wrappar section .main-box5 .container2 ul{
+    /* border: solid; */
+    display: flex;
+    justify-content: center;
+}
+
+#main-wrappar section .main-box5 .container2 ul li {
+    position: relative;
+    border: solid 1px blue;
+    display: table;
+    border-radius: 5px;
+    width: 450px;
+    height: 80px;
+    margin: 40px 30px;
+    background: #1A2172;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container2 ul li:hover {
+    background: #FFFFFF;
+    transition: all 0.6s;
+}
+
+
+#main-wrappar section .main-box5 .container2 ul li a::after {
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 55px;
+    display: inline-block;
+    width: 180px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box5 .container2 ul li a.text2::after{
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 62px;
+    display: inline-block;
+    width: 65px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container2 ul li a{
+    /* border: solid; */
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #FFFFFF;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container2 ul li a:hover{
+    /* border: solid; */
+    color: #1A2172;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box5 .container2 ul li a::before{
+    /* border: solid black; */
+    position: absolute;
+    content: '';
+    top: 8px;
+    right: 10px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+#main-wrappar section .main-box5 .container2 ul li a:hover::before{
+    position: absolute;
+    content: '';
+    top: 8px;
+    right: 10px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s;
+}
+
+/* --------------------------- main-box6 ----------------------------*/
+#main-wrappar section .main-box6{
+    /* border: solid; */
+    background: #F3F3F3;
+    /* margin-top: 70px; */
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+#main-wrappar section .main-box6 h2 {
+    /* border: solid; */
+    display: block;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+
+}
+
+#main-wrappar section .main-box6 p{
+    /* border: solid; */
+    width: 300px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+#main-wrappar section .main-box6 .box{
+    /* border: solid; */
+    padding: 10px 100px;
+    margin-bottom: 20px;
+}
+
+#main-wrappar section .main-box6 .box .container {
+    /* border: solid; */
+    display: flex;
+    overflow: hidden;
+    
+}
+
+#main-wrappar section .main-box6 .box .sub-box1{
+    /* border: solid; */
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    transition: transform .2s ease;
+    overflow: hidden;
+}
+    #main-wrappar section .main-box6 .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s ease;
+    overflow: hidden;
+}
+
+#main-wrappar section .main-box6 .box .sub-box1:hover img{
+    transform: scale(1.1);
+    transition: transform .2s ease;
+}
+
+#main-wrappar section .main-box6 .box .sub-box2 {
+    /* border: solid; */
+    display: block;
+    width: 100%;
+    margin-left: 30px;
+    align-items: center;
+}
+
+#main-wrappar section .main-box6 .box .sub-box2 time{
+    /* border: solid; */
+    display: block;
+    width: 300px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 40px 0 0 0px;
+}
+#main-wrappar section .main-box6 .box .sub-box2 p{
+    /* border: solid; */
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 800;
+    margin: 10px 0 0 0px;
+}
+
+#main-wrappar section .main-box6 .box2 {
+    /* border: solid 1px blue; */
+    position: relative;
+    display: table;
+    margin: 40px auto 0;
+    text-align: center;
+    /* transition: all 0.4s ease-in-out; */
+}
+
+#main-wrappar section .main-box6 .box2 a{
+    border: solid 1px;
+    display: table-cell;
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+    font-size: 20px;
+    vertical-align: middle;
+    color: #192287;
+    transition: all 0.4s ease-in-out;
+}
+
+#main-wrappar section .main-box6 .box2 a:hover{
+    display: table-cell;
+    vertical-align: middle;
+    color: #FFFFFF;
+    background: #192287;
+    transition: all 0.4s ease-in-out;
+}
+
+#main-wrappar section .main-box6 .box2 a::before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #192287;
+    border-right: 2px solid #192287;
+    transform: rotate(45deg); /* 角度調整 */
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box6 .box2 a:hover::before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    transform: rotate(45deg); /* 角度調整 */
+    transition: all 0.6s;
+}
+
+
+#main-wrappar section .main-box6 .box2 a::after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 20px;
+    height: 2px;
+    background: #192287;
+    transition: all 0.6s;
+}
+
+#main-wrappar section .main-box6 .box2 a:hover::after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0.5px;
+    bottom: 0;
+    right: 20px; /* 要素の右からの距離 */
+    width: 20px;
+    height:2px;
+    background: #FFFFFF;
+    transition: all 0.6s;
+}
+
+/* --------------------------- main-box7 ----------------------------*/
+#main-wrappar section .main-box7{
+    /* border: solid; */
+    position: relative;
+    padding-bottom: 230px;
+}
+
+#main-wrappar section .main-box7 .box0 img {
+    /* border: solid; */
+    position: absolute;
+    display: block;
+    width: 650px;
+    height: 650px;
+    top: -220px;
+    right: 0;
+}
+
+
+#main-wrappar section .main-box7 .box1 h1{
+    /* border: solid;   */
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box7 .box1 h1:after{
+    position: absolute;
+    content: '';
+    top: -30px;
+    left: 400px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/home_daily_bg.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+#main-wrappar section .main-box7 .box1 h3 {
+    /* border: solid; */
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box7 .box1 p {
+    display: block;
+    margin-bottom: 16px;
+    margin-left: 50px;
+    width: 600px;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+#main-wrappar section .main-box7 .box2 {
+    /* border: solid; */
+    position: relative;
+    display: table;
+    width: 500px;
+    height: 100px;
+    margin-top: 70px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+#main-wrappar section .main-box7 .box2 a {
+    border: solid 1px;
+    display: table-cell;
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+    font-size: 26px;
+    vertical-align: middle;
+    color: #FFFFFF;
+    background: #192287;
+    transition: all 0.6s ease-in-out;
+}
+
+#main-wrappar section .main-box7 .box2 a::before {
+    position: absolute;
+    content: '';
+    top: 12px;
+    right: 12px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s ease-in-out;
+}
+
+
+#main-wrappar section .main-box7 .box2 a:hover {
+    display: table-cell;
+    vertical-align: middle;
+    background: #FFFFFF;
+    color: #192287;
+    transition: all 0.6s ease-in-out;
+}
+
+#main-wrappar section .main-box7 .box2 a:hover::before {
+    position: absolute;
+    content: '';
+    top: 12px;
+    right: 12px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.6s ease-in-out;
+}
+
+#main-wrappar section .main-box7 .box3 {
+    /* border: solid; */
+    text-align: center;
+    width: 1000px;
+    height: 200px;
+    margin: 150px auto 0;
+}
+
+#main-wrappar section .main-box7 .box3 img.picture1 {
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+#main-wrappar section .main-box7 .box3 img.picture2 {
+    display: none;
+}
+
+
+#main-wrappar section .main-box7 .box3 img:hover {
+    opacity: 0.7;
+    transition: all 0.4s;
+}
+/* --------------------------- main-box8 ----------------------------*/
+#main-wrappar section .main-box8 {
+    /* border: solid; */
+    position: relative;
+    background: #1F2464;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 150px;
+}
+
+#main-wrappar section .main-box8 .picture1 {
+    position: absolute;
+    top: -100px;
+    display: block;
+    /* display: none; */
+    width: 580px;
+    height: 580px;
+    z-index: 1;
+}
+
+#main-wrappar section .main-box8 .picture2 {
+    display: block;
+    /* display: none; */
+    position: absolute;
+    top: 330px;
+    left: 300px;
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+#main-wrappar section .main-box8 .box1 {
+    position: relative;
+}
+
+#main-wrappar section .main-box8 .box1 h1{
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 710px;
+    width: 400px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box8 .box1 h1::after{
+    position: absolute;
+    content: '';
+    top: -20px;
+    right: 130px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/home_business_bg.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+#main-wrappar section .main-box8 .box1 h3 {
+    /* border: solid; */
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 710px;
+    width: 500px;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+#main-wrappar section .main-box8 .box1 p.text1 {
+    /* border: solid; */
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 16px;
+    margin-left: 710px;
+    width: 500px;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
+#main-wrappar section .main-box8 .box1 p.text2 {
+    display: none;
+}
+
+#main-wrappar section .main-box8 .box2 {
+    /* border: solid; */
+    position: relative;
+    display: table;
+    width: 400px;
+    height: 80px;
+    margin-top: 70px;
+    margin-left: 730px;
+    text-align: center;
+}
+
+#main-wrappar section .main-box8 .box2 a{
+    border: solid 1px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #192287;
+    background: #FFFFFF;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box2 a::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box2 a:hover{
+    color: #FFFFFF;
+    background: #192287;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box2 a:hover::before{
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box2 a::after{
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 175px;
+    display: inline-block;
+    width: 50px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+
+#main-wrappar section .main-box8 .box3 {
+    display: table;
+    position: relative;
+    width: 400px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 730px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box3 a{
+    border: solid 1px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #192287;
+    background: #FFFFFF;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box3 a::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box3 a:hover{
+    color: #FFFFFF;
+    background: #192287;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box3 a:hover::before{
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box3 a::after{
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 160px;
+    display: inline-block;
+    width: 65px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box4 {
+    display: table;
+    position: relative;
+    width: 400px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 730px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box4 a{
+    border: solid 1px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #192287;
+    background: #FFFFFF;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box4 a::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon_external_blue.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box4 a:hover{
+    color: #FFFFFF;
+    background: #192287;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box4 a:hover::before{
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon_external_white.svg);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-wrappar section .main-box8 .box4 a::after{
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 165px;
+    display: inline-block;
+    width: 65px;
+    height: 12px;
+    background-image: url(../img/marker_orange.png);
+    background-size: contain;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+/* --------------------------- main-box9 ----------------------------*/
+
+#main-wrappar section .main-box9 {
+    position: relative;
+    /* display: none; */
+    object-fit: contain;
+    width: 100%;
+    height: 650px;
+    background: url(../img/home_foot_bg.jpg);
+    z-index: -10;
+}
+
+#main-wrappar section .main-box9 img {
+    /* border: solid; */
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 35%;
+    left: 41%;
+    z-index: 10;
+}
+
+[ class="page-top"]{
+    display: none;
+}
+
+/* --------------------------- footer --------------------------------*/
+/* --------------------------- main-box10 ----------------------------*/
+footer .main-box10 {
+    /* border: solid; */
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+footer .main-box10 .picture img{
+    /* border: solid; */
+    display:inline-block;
+    width: 200px;
+    height: 200px;
+    transform: scale(1);
+    object-fit: contain;
+    margin: 100px 10px ;
+}
+
+footer .main-box10 .textbox {
+    /* border: solid; */
+    display: flex;
+    height: 370px;
+    justify-content: space-between;
+}
+
+footer .main-box10 .textbox .text1 {
+    /* border: solid; */
+    text-align: left;
+    /* padding-right: 70px; */
+    margin-left: 40px;
+}
+
+footer .main-box10 .textbox .text1 h1{
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+
+footer .main-box10 .textbox .text1 h3{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1{
+    /* border:solid; */
+    width: 500px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+/* --------------------------- 動く下線と矢印について ----------------------------*/
+/* --------------------------- contact_us1について -----------------------------*/
+
+footer .main-box10 .textbox .text1 .contact_us1 li{
+    /* border: solid; */
+    list-style: "・";
+    margin-left: 20px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 li.arrow3{
+    position: relative;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 li.arrow3::before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 175px; /* 要素の右からの距離 */
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #192287;
+    border-right: 2px solid #192287;
+    transform: rotate(45deg); /* 角度調整 */
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 li a{
+    /* border: solid; */
+    display: block;
+    width: 190px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 li.arrow3::after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 166px; /* 要素の右からの距離 */
+    width: 15px;
+    height:2px;
+    background: #192287;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 li a:before{
+    content: "";
+    display: block;
+    position: relative;
+    border-bottom: solid 1px;
+    width: 183px;
+    top: 25px;
+    background: #000000;
+    transform: scale(1, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 li a:hover::before{
+    transform-origin: right top;
+    transform: scale(0, 1);
+}
+
+/* --------------------------- 動く下線と矢印について ----------------------------*/
+/* --------------------------- contact_us2について -----------------------------*/
+footer .main-box10 .textbox .text1 .contact_us2 li{
+    /* border: solid; */
+    list-style: "・";
+    margin-left: 15px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 li.arrow3{
+    position: relative;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 li.arrow3::before{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 175px; /* 要素の右からの距離 */
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #192287;
+    border-right: 2px solid #192287;
+    transform: rotate(45deg); /* 角度調整 */
+}
+footer .main-box10 .textbox .text1 .contact_us2 li.arrow3::after{
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 166px; /* 要素の右からの距離 */
+    width: 15px;
+    height:2px;
+    background: #192287;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 li a{
+    /* border: solid; */
+    display: block;
+    width: 190px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 li a:before{
+    content: "";
+    display: block;
+    position: relative;
+    border-bottom: solid 1px;
+    width: 183px;
+    top: 25px;
+    background: #000000;
+    transform: scale(1, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 li a:hover::before{
+    transform-origin: right top;
+    transform: scale(0, 1);
+}
+
+
+footer .main-box10 .textbox .text1 .contact_us1 h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us1 p{
+    margin-bottom: 7px;
+}
+
+
+footer .main-box10 .textbox .text1 .contact_us2{
+    width: 500px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 li{
+    /* border: solid; */
+    list-style: "・";
+    margin-left: 15px;
+}
+
+
+footer .main-box10 .textbox .text1 .contact_us2 h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+footer .main-box10 .textbox .text1 .contact_us2 p{
+    margin-bottom: 7px;
+}
+
+footer .main-box10 .textbox .text2 .SNS-block {
+    display: flex;
+    text-align: left;
+}
+
+footer .main-box10 .textbox .text2 .SNS-block .box1{
+    /* border: solid; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+
+footer .main-box10 .textbox .text2 .SNS-block .box1 li {
+    /* border: solid; */
+    margin-right: 20px;
+}
+
+
+footer .main-box10 .textbox .text2 .SNS-block .box1 span.text1-1 {
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 50px;
+}
+
+footer .main-box10 .textbox .text2 .SNS-block .box1 span.text1-1::before {
+    content: "";
+    background-image: url(../img/icon_instagram_black.svg);
+    background-size: contain;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+footer .main-box10 .textbox .text2 .SNS-block .box1 span.text1-2 {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+footer .main-box10 .textbox .text2 .SNS-block .box1 span.text1-3 {
+    /* border: solid; */
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 40px;
+    padding-left: 50px;
+}
+
+footer .main-box10 .textbox .text2 .SNS-block .box1 span.text1-3::before {
+    content: "";
+    background-image: url(../img/icon_facebook_black.svg);
+    background-size: contain;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer [class="copy"]{
+    /* border: solid; */
+    display: block;
+    width: 600px;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
