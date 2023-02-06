@@ -1,0 +1,44 @@
+@media screen and (max-width:768px) {
+    .moveIn1,
+    .moveIn2{
+        opacity: 1;
+    }
+    
+    .moveIn1.active{
+        animation-name: moveAnime1;
+        animation-fill-mode: forwards;    
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        opacity: 1;
+    }
+
+    @keyframes moveAnime1 {
+        0%{
+            opacity: 1;
+            transform: translateX(-10%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    /* .moveIn2.active{
+        animation-name: moveAnime2;
+        animation-fill-mode: forwards;    
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        opacity: 1;
+    } */
+
+    /* @keyframes moveAnime2 {
+        0%{
+            opacity: 1;
+            transform: translateX(10%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    } */
+}
